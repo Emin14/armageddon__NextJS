@@ -10,6 +10,7 @@ import styles from './asteroid.module.css'
 
 export default function Asteroid({data, id, date, distance, nameAsteroid, diametr, hazardous, basket}) {
 
+
   const {asteroids, setAsteroids, unit} = useAppContext()
 
   const addToBasket = (e) => {
@@ -29,6 +30,8 @@ export default function Asteroid({data, id, date, distance, nameAsteroid, diamet
 
   }
 
+  let formatter = new Intl.NumberFormat("ru");
+
   const [clientWindowHeight, setClientWindowHeight] = useState("");
 
   const handleScroll = () => {
@@ -44,13 +47,14 @@ export default function Asteroid({data, id, date, distance, nameAsteroid, diamet
 
 
 
+
   return (
     <li className={styles.asteroid}>
       <h5 className={styles.date}>{format(new Date(date), 'd MMM yyyy', { locale: ru })}</h5>
       
       <div className={styles.asteroidInfo}>
         <div className={styles.info} >
-          <p><span>{Math.round(distance[unit])} </span> 
+          <p><span>{ formatter.format(Math.round(distance[unit]))} </span> 
           {unit === 'lunar' 
           ? <>
           <span>{declineWord((distance[unit]), 'лунн', 'ая', 'ыe', 'ых')}</span> <span>{declineWord((distance[unit]), 'орбит', 'а', 'ы', '')}</span>

@@ -26,5 +26,41 @@
 
 .table  td {
     border: 2px solid white;
+    padding: 5px;
 }
 
+.details > summary {
+  list-style: none;
+  cursor: pointer;
+  background-color:rgb(38, 29, 154);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
+  }
+
+.today > summary {
+  padding: 10px 5px;
+  background-color:rgb(234, 211, 34);
+  color: rgb(0, 0, 0);
+  }
+
+.details[open] > summary {
+  background-color:rgb(123, 116, 251);
+  }
+
+.today[open] > summary {
+  background-color:rgb(254, 234, 81)
+}
+
+.details > summary:before {
+content: "+";
+margin: -5px 5px 0 0;
+}
+  
+.details[open] summary:before {
+  content: "-";
+  }
+  
+.approachInfo {
+  margin: 10px 0;
+  }
