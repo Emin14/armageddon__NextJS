@@ -1,0 +1,32 @@
+.asteroid {
+    max-width: 402px;
+    min-width: 279px;
+  }
+  
+  
+  
+  @media (max-width: 700px) {
+    .asteroid {
+      margin-left: 72px;
+      padding-bottom: 81px;
+    }
+  } 
+
+.nearbyAsteroids {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-bottom: 8px;
+}
+
+.filter {
+  margin-bottom: 24px;
+}
+
+.filter__item {
+  cursor: pointer;
+}
+
+.active {
+  text-decoration: underline;
+}

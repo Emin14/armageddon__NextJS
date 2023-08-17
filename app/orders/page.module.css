@@ -1,0 +1,46 @@
+.wrapper {
+    display: flex;
+}
+
+.order {
+    /* width: 402px; */
+    max-width: 72vw;
+    margin-left: 527px;
+  }
+  
+  
+  @media (min-width: 701px) and (max-width: 1120px) {
+    .order {
+      margin-left: 362px;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .order {
+      margin-left: 72px;
+    }
+  }
+
+  .title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    margin-bottom: 24px;
+  }
+
+  .copyright {
+    display: none;
+  }
+
+  @media (max-width: 700px) {
+    .copyright {
+      display: block;
+      text-align: center;
+      margin: 16px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+

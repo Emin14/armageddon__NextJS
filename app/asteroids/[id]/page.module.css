@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+}
+
+
+.image {
+    width: 400px;
+    margin-right: 127px;
+  }
+  
+  @media (min-width: 701px) and (max-width: 1120px) {
+    .image {
+      width: 377px;
+      margin-right: 58px;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .image {
+      width: 48px;
+      margin-right: 24px;
+    }
+  }
+
+
+
+.table  td {
+    border: 2px solid white;
+}
+
