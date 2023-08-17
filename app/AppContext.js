@@ -7,6 +7,7 @@ export const AppProvider = ({ children }) => {
 
     const [unit, setUnit] = useState('lunar')
     const [asteroids, setAsteroids] = useState([])
+    const [allAsteroids, setAllsteroids] = useState([])
 
     const value = {
      asteroids,

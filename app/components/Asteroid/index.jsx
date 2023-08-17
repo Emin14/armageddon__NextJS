@@ -5,21 +5,19 @@ import ru from "date-fns/locale/ru";
 import { useAppContext } from '../../AppContext'
 import declineWord from 'decline-word';
 import Link from 'next/link'
-import {useState, useEffect} from 'react'
 import styles from './asteroid.module.css'
 
-export default function Asteroid({data, id, date, distance, nameAsteroid, diametr, hazardous, basket}) {
+export default function Asteroid({data, basket}) {
 
 
   const {asteroids, setAsteroids, unit} = useAppContext()
+
 
   const addToBasket = (e) => {
     const idAsteroid = e.target.getAttribute("data-id");
     let newArray = data.flat().filter(item => item.id === idAsteroid);
     [newArray] = [...newArray]
-    console.log(asteroids)
     const find = asteroids.find(item => item.id === newArray.id)
-    console.log(find)
     if(!find) {
       setAsteroids([...asteroids, newArray])
     }
@@ -32,22 +30,17 @@ export default function Asteroid({data, id, date, distance, nameAsteroid, diamet
 
   let formatter = new Intl.NumberFormat("ru");
 
-  const [clientWindowHeight, setClientWindowHeight] = useState("");
-
-  const handleScroll = () => {
-    setClientWindowHeight(window.scrollY);
-    console.log(window.scrollY)
-  };
-  
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll); 
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
 
 
-
-
-
+return (
+  <ul>
+    {data && data.map(item => item.map(el => {
+    const date = el.close_approach_data[0].close_approach_date
+    const nameAsteroid= el.name 
+    const diametr = el.estimated_diameter.meters.estimated_diameter_max
+    const hazardous= el.is_potentially_hazardous_asteroid
+    const distance = el.close_approach_data[0].miss_distance
+    const id = el.id
   return (
     <li className={styles.asteroid}>
       <h5 className={styles.date}>{format(new Date(date), 'd MMM yyyy', { locale: ru })}</h5>
@@ -79,4 +72,10 @@ export default function Asteroid({data, id, date, distance, nameAsteroid, diamet
       </div>
     </li>
   )
+      })
+  )}
+  </ul>
+)
+
+  
 }
