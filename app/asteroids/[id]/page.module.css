@@ -2,7 +2,6 @@
     display: flex;
 }
 
-
 .image {
     width: 400px;
     margin-right: 127px;
@@ -22,12 +21,89 @@
     }
   }
 
-
-
-.table  td {
-    border: 2px solid white;
-    padding: 5px;
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 5px solid #fff;
+  border-top: 5px solid #fff;
+  border-bottom: 3px solid #fff;
+  outline: 2px solid #ffd300;
+  font-size: 15px;
+  background: #fff!important;
+  color: black;
 }
+
+.table th {
+  font-weight: bold;
+  padding: 7px;
+  background: #ffd300;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #ffd300;
+  color: rgb(244, 6, 6);
+}
+
+.table td {
+  padding: 7px;
+  border: none;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  font-size: 15px;
+}
+
+.table tbody tr:nth-child(even){
+  background: #eaeef6!important;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.tableAndImage {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.asteroidImg {
+  background-color: #d4e2fb;
+  border-radius: 50%;
+  margin-bottom: 10px;
+
+  }
+
+  @media (max-width: 1120px) {
+    .asteroidImg {
+      display: none;
+    }
+  }
+
+
+.approachTable {
+  width: 100%;
+  margin-bottom: 20px;
+  /* border-collapse: collapse;  */
+  border-radius: 14px;
+  font-size: 14px;
+  background: #fff!important;
+  color: black;
+}
+
+
+.approachTable td {
+  padding: 5px;
+  border: none;
+}
+
+.approachTable tbody tr:nth-child(even){
+  background: #eaeef6!important;
+}
+
+.approachInfo {
+  margin: 10px 0;
+  }
 
 .details > summary {
   list-style: none;
@@ -38,9 +114,10 @@
   margin-bottom: 5px;
   }
 
+  
 .today > summary {
   padding: 10px 5px;
-  background-color:rgb(234, 211, 34);
+  background-color:#ffd300;
   color: rgb(0, 0, 0);
   }
 
@@ -59,8 +136,4 @@ margin: -5px 5px 0 0;
   
 .details[open] summary:before {
   content: "-";
-  }
-  
-.approachInfo {
-  margin: 10px 0;
   }

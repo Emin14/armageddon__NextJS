@@ -14,7 +14,7 @@ export default function Orders() {
       <Banner/>
       <div className={styles.order}>
         <p className={styles.title}>Заказ отправлен</p>
-            <Asteroid data={[asteroids]} basket={true}/>
+          <Asteroid data={asteroids} basket={true}/>
       </div>
       <p className={styles.copyright}>© Все права и планета защищены</p>
     </div>

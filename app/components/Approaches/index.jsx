@@ -1,16 +1,15 @@
 'use client'
 
-import styles from './Approaches.module.css'
 import { useAppContext } from '../../AppContext'
+import styles from './Approaches.module.css'
 
 export default function Approaches({children}) {
 
-
     const {unit, setUnit } = useAppContext()
 
-   const handleClick = (e) => {
-    setUnit(e.target.getAttribute("data-unit"))
-  }
+    const handleClick = (e) => {
+      setUnit(e.target.getAttribute("data-unit"))
+    }
 
 
   return (

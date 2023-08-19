@@ -5,19 +5,19 @@
     /* wi */
   }
   
-  @media (min-width: 701px) and (max-width: 1120px) {
-    .banner {
-      width: 377px;
-      height: 436px;
-      left: -73px;
-      
-      }
-  }
-  
-  @media (max-width: 700px) {
-    .banner {
-      width: 377px;
-      height: 436px;
-      left: -329px;
+@media (min-width: 701px) and (max-width: 1120px) {
+  .banner {
+    width: 377px;
+    height: 436px;
+    left: -73px;
+    
     }
+}
+  
+@media (max-width: 700px) {
+  .banner {
+    width: 377px;
+    height: 436px;
+    left: -329px;
   }
+}

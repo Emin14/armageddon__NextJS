@@ -1,15 +1,13 @@
 'use client'
 
-import { useAppContext } from '../../AppContext'
 import declineWord from 'decline-word';
+import { useAppContext } from '../../AppContext'
 import { useRouter } from 'next/navigation'
 import styles from './basket.module.css'
 
 export default function Basket() {
 
   const {asteroids} = useAppContext()
-
-  // console.log(asteroids)
 
   const router = useRouter()
 

@@ -8,6 +8,7 @@ export default function Banner() {
       src={earthImg}
       className={styles.banner}
       alt="Earth"
+      priority
     />
   )
 }

@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.jsx", "app/libs/getAsteroids.js", "app/components/Asteroid/index.js", "app/asteroids/[id]/page.jsx", "app/components/Approaches/index.jsx"],
   "exclude": ["node_modules"]
 }
