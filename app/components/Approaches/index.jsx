@@ -1,7 +1,7 @@
 'use client'
 
 import { useAppContext } from '../../AppContext'
-import styles from './Approaches.module.css'
+import styles from './approaches.module.css'
 
 export default function Approaches({children}) {
 
