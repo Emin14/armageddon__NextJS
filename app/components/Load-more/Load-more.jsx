@@ -8,7 +8,7 @@ import Asteroid from "../Asteroid";
 import styles from './load-more.module.css'
 
 
-export default function loadMore() {
+export default function LoadMore() {
 
     const [asteroids, SetAsteroids] = useState([])
     const [lastStartDate, setLastStartDate] = useState(new Date())
