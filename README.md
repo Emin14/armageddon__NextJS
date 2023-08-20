@@ -1,4 +1,4 @@
-<h1 align="center">Funduchok</h1>
+<h1 align="center">Armageddon__NextJS</h1>
 
 ## Description
 
