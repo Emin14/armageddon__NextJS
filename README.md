@@ -6,6 +6,10 @@ An online service for monitoring and destroying dangerous asteroids based on NAS
 
 https://api.nasa.gov/#browseAPI
 
+## Deployment
+
+https://armageddon-next-js-innu.vercel.app/
+
 ## Preview
 
 <h5>Screenshot 1:</h5>
