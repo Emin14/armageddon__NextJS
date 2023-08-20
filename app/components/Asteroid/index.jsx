@@ -38,8 +38,10 @@ export default function Asteroid({data, basket}) {
   // Для красивого отображения разрядов чисел
   let formatter = new Intl.NumberFormat("ru");
 
+  const innerWidth = window.innerWidth
+
   // Сохраняем текущую ширину экрана
-  const [width, setWidth] = useState(window.innerWidth)
+  const [width, setWidth] = useState(innerWidth)
 
   // Подписываемся на изменение ширины экрана
   window.addEventListener('resize', (e) => {
