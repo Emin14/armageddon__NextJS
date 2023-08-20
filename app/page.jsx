@@ -5,7 +5,6 @@ import getAsteroids from './libs/getAsteroids'
 import Basket from './components/Basket'
 import Banner from './components/Banner'
 import LoadMore from './components/Load-more/Load-more'
-import Test from './components/Test'
 
 
 export default async function Home() {
@@ -14,7 +13,6 @@ export default async function Home() {
 
   const data = await getAsteroids(today)
 
-  // console.log(data)
 
   return (
     <main className={styles.main}>
@@ -28,7 +26,6 @@ export default async function Home() {
       <div className={styles.basket}>
         <Basket data={data} />
       </div>
-      <Test />
     </main>
   )
 }
