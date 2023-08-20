@@ -4,7 +4,7 @@ import Approaches from './components/Approaches'
 import getAsteroids from './libs/getAsteroids'
 import Basket from './components/Basket'
 import Banner from './components/Banner'
-import LoadMore from './components/Load-more/Load-more'
+import LoadMore from './components/Load-more'
 
 
 export default async function Home() {
@@ -13,18 +13,17 @@ export default async function Home() {
 
   const data = await getAsteroids(today)
 
-
   return (
     <main className={styles.main}>
-      <div className={styles.image}>
         <Banner />
-      </div>
-      <Approaches>
-        <Asteroid data={data} />
-        <LoadMore />
-      </Approaches>
-      <div className={styles.basket}>
-        <Basket data={data} />
+      <div className={styles.ff}>
+        <Approaches>
+          <Asteroid data={data} />
+          <LoadMore />
+        </Approaches>
+        <div className={styles.basket}>
+          <Basket data={data} />
+        </div>
       </div>
     </main>
   )

@@ -1,24 +1,33 @@
 .wrapper {
     display: flex;
+    gap: 127px;
 }
 
-.order {
-  max-width: 72vw;
-  margin-left: 527px;
-}
-  
-@media (min-width: 701px) and (max-width: 1120px) {
-  .order {
-    margin-left: 362px;
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .wrapper {
+    gap: 5.6vw;
   }
 }
 
-@media (max-width: 700px) {
-  .order {
-    margin-left: 72px;
-    min-width: 335px;
+@media (min-width: 769px) and (max-width: 992px) {
+  .wrapper {
+    gap: 5vw;
   }
 }
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .wrapper {
+    gap: 9vw;
+  }
+  }
+
+@media (max-width: 576px) {
+  .wrapper {
+    gap: 6.2vw;
+  }
+}
+
 
 .title {
   font-size: 28px;
@@ -32,13 +41,14 @@
   display: none;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .copyright {
     display: block;
     text-align: center;
     margin: 16px;
     position: fixed;
     bottom: 0;
+    right: 0;
     width: 100%;
   }
 }

@@ -1,25 +1,37 @@
 .wrapper {
     display: flex;
+    gap: 127px;
 }
 
-.image {
-    width: 400px;
-    margin-right: 127px;
+@media (min-width: 993px) and (max-width: 1200px) {
+  .wrapper {
+    gap: 5.6vw;
   }
-  
-  @media (min-width: 701px) and (max-width: 1120px) {
-    .image {
-      width: 377px;
-      margin-right: 58px;
-    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .wrapper {
+    gap: 9vw;
   }
-  
-  @media (max-width: 700px) {
-    .image {
-      width: 48px;
-      margin-right: 24px;
-    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .wrapper {
+    gap: 6vw;
   }
+  }
+
+@media (max-width: 576px) {
+  .wrapper {
+    gap: 6.2vw;
+  }
+}
+
+
+
+.info {
+  padding-right: 10px;
+}
 
 .table {
   width: 100%;
@@ -74,7 +86,7 @@
 
   }
 
-  @media (max-width: 1120px) {
+  @media (max-width: 992px) {
     .asteroidImg {
       display: none;
     }

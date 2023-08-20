@@ -1,21 +1,65 @@
-.banner{
-    left: -136px;
-    object-fit: contain;
-    position: absolute;
-    /* wi */
-  }
-  
-@media (min-width: 701px) and (max-width: 1120px) {
+.banner {
+  width: 400px;
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
   .banner {
+    width: 304px;
+  }
+}  
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .banner {
+    width: 164px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .banner {
+    width: 124px;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner {
+    width: 48px;
+  }
+}
+
+
+.image{
+  left: -136px;
+  object-fit: contain;
+  position: absolute;
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .image {
     width: 377px;
     height: 436px;
     left: -73px;
+    }
+}  
+  
+@media (min-width: 769px) and (max-width: 992px) {
+  .image {
+    width: 377px;
+    height: 436px;
+    left: -213px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .image {
+    width: 377px;
+    height: 436px;
+    left: -253px;
     
     }
 }
-  
-@media (max-width: 700px) {
-  .banner {
+
+@media (max-width: 576px) {
+  .image {
     width: 377px;
     height: 436px;
     left: -329px;

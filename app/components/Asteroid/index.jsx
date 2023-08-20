@@ -6,35 +6,49 @@ import { format } from 'date-fns'
 import ru from "date-fns/locale/ru";
 import declineWord from 'decline-word';
 import { useAppContext } from '../../AppContext'
+import {useState} from 'react'
 import calcWidth from '../../libs/calcAsteroidImgWidth'
 import asteroidImg from '../../../public/asteroid.svg'
 import styles from './asteroid.module.css'
 
+
+// Компонент вывода информации по астероидам 
 export default function Asteroid({data, basket}) {
 
   const {asteroids, setAsteroids, unit} = useAppContext()
 
-
+// Функция для добавления опреденного астероидв в корзину
   const addToBasket = (e) => {
     const idAsteroid = e.target.getAttribute("data-id");
     let newArray = data.flat().filter(item => item.id === idAsteroid);
     [newArray] = [...newArray]
 
     const find = asteroids.find(item => item.id === newArray.id)
+    //если в корзине(массиве) нету, то добавляет в массив
     if(!find) {
       setAsteroids([...asteroids, newArray])
     }
+    //иначе удаляет из массива
     else {
       const newAsteroids = asteroids.filter(item => item.id !== idAsteroid)
       setAsteroids([...newAsteroids])
     }
   }
 
+  // Для красивого отображения разрядов чисел
   let formatter = new Intl.NumberFormat("ru");
+
+  // Сохраняем текущую ширину экрана
+  const [width, setWidth] = useState(window.innerWidth)
+
+  // Подписываемся на изменение ширины экрана
+  window.addEventListener('resize', (e) => {
+    setWidth(e.target.innerWidth);
+  });
 
 
   return (
-    <ul>
+    <ul className={styles.list}>
       {data && data.map(el => {
       const date = el.close_approach_data[0].close_approach_date
       const nameAsteroid= el.name 
@@ -58,7 +72,7 @@ export default function Asteroid({data, basket}) {
             </p>
             <img className={styles.arrow} src="./Arrow1.svg" alt="" />
           <div className={styles. image}>
-            <Image src={asteroidImg} style={{width: `${calcWidth(diametr)}px`}} alt="asteroid" />
+            <Image src={asteroidImg} className={styles.asteroidImg} style={{width: `${calcWidth(diametr, width)}px`}}  alt="asteroid" />
           </div>
 
             <Link className={styles.nameAsteroid} href={`/asteroids/${id}`}>

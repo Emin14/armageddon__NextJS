@@ -5,6 +5,7 @@ import asteroidImg from '../../../public/asteroid.svg'
 import calcWidth from '../../libs/calcAsteroidImgWidth'
 import styles from './page.module.css'
 
+// Динамически генерируем title страницы, по желанию можно и description добавить
 export async function generateMetadata({params: {id}}) {
   
   const data = await getAsteroid(id)
@@ -14,16 +15,14 @@ export async function generateMetadata({params: {id}}) {
   }
 }
 
-
+// Компонент страницы определенного астероида
 export default async function AsteroidPages({params: {id}}  ) {
 
   const data = await getAsteroid(id)
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.image}>
-        <Banner/>
-      </div>
+      <Banner/>
       <div className={styles.info}>
         <h1 className={styles.title}><span>Информация по астероиду</span> <span>{data.name}:</span></h1>
         <div className={styles.tableAndImage}>

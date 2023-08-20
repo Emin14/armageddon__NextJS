@@ -3,6 +3,7 @@
 import { useAppContext } from '../../AppContext'
 import styles from './approaches.module.css'
 
+// Компонент вывода блока на главной странице: фильтра и всех астероидов (children)
 export default function Approaches({children}) {
 
     const {unit, setUnit } = useAppContext()

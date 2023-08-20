@@ -1,36 +1,78 @@
 
 .main {
   display: flex;
-  padding-right: 10px;
+  gap: 127px;
 }
 
-.image {
+@media (min-width: 993px) and (max-width: 1200px) {
+  .main {
+    gap: 5.6vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .main {
+    gap: 5vw;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .main {
+    gap: 9vw;
+  }
+  }
+
+@media (max-width: 576px) {
+  .main {
+    gap: 6.2vw;
+  }
+}
+
+
+
+/* .image {
   width: 400px;
-  margin-right: 127px;
 }
 
-@media (min-width: 701px) and (max-width: 1120px) {
-  .image {
-    width: 377px;
-    margin-right: 58px;
+
+@media (min-width: 993px) and (max-width: 1200px) {
+.image {
+  width: 304px;
+  }
+}  
+
+@media (min-width: 769px) and (max-width: 992px) {
+.image {
+  width: 164px;
   }
 }
 
-@media (max-width: 700px) {
-  .image {
-    width: 48px;
-    margin-right: 24px;
+@media (min-width: 577px) and (max-width: 768px) {
+.image {
+  width: 124px;
   }
 }
+
+@media (max-width: 576px) {
+.image {
+  width: 48px;
+}
+} */
+
+
 
 .basket {
   width: 150px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .basket {
     margin: 0;
     position: fixed;
     bottom: 0;
   }
+}
+
+.ff {
+  display: flex;
 }
