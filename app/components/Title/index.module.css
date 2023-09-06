@@ -22,8 +22,16 @@
 
 .filter__item {
   cursor: pointer;
+  background-color: inherit;
+  color: white;
+  border: none;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .active {
   text-decoration: underline;
+  font-weight: 700;
 }

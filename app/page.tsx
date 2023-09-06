@@ -1,11 +1,10 @@
-import styles from './page.module.css'
 import Asteroid from './components/Asteroid'
-import Approaches from './components/Approaches'
+import Title from './components/Title'
 import getAsteroids from './libs/getAsteroids'
 import Basket from './components/Basket'
 import Banner from './components/Banner'
 import LoadMore from './components/Load-more'
-
+import styles from './page.module.css'
 
 export default async function Home() {
 
@@ -15,14 +14,15 @@ export default async function Home() {
 
   return (
     <main className={styles.main}>
-        <Banner />
-      <div className={styles.ff}>
-        <Approaches>
+      <Banner />
+      <div className={styles.flex}>
+        <div className={styles.asteroid}>
+          <Title />
           <Asteroid data={data} />
           <LoadMore />
-        </Approaches>
+        </div>
         <div className={styles.basket}>
-          <Basket data={data} />
+          <Basket />
         </div>
       </div>
     </main>

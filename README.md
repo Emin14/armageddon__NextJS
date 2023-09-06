@@ -8,7 +8,7 @@ https://api.nasa.gov/#browseAPI
 
 ## Deployment
 
-https://armageddon-next-js-innu.vercel.app/
+https://armageddon-next-js-five.vercel.app/
 
 ## Preview
 
@@ -58,6 +58,7 @@ Start the server
 ## Tools
 
 - [Next.js 13.4v](https://nextjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
 - [Decline-word](https://www.npmjs.com/package/decline-word)
 - [Date-fns](https://www.npmjs.com/package/date-fns)
 - [React-intersection-observer](https://www.npmjs.com/package/react-intersection-observer)

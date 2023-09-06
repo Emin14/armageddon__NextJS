@@ -3,9 +3,8 @@
 import declineWord from 'decline-word';
 import { useAppContext } from '../../AppContext'
 import { useRouter } from 'next/navigation'
-import styles from './basket.module.css'
+import styles from './index.module.css'
 
-// Компонент отображения корзины на главной странице
 export default function Basket() {
 
   const {asteroids} = useAppContext()

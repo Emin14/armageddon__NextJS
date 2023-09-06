@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import styles from './header.module.css'
+import styles from './index.module.css'
 
-// Компонент отображения шапки сайта
 export default function Header() {
 
   return (

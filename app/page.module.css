@@ -28,39 +28,6 @@
   }
 }
 
-
-
-/* .image {
-  width: 400px;
-}
-
-
-@media (min-width: 993px) and (max-width: 1200px) {
-.image {
-  width: 304px;
-  }
-}  
-
-@media (min-width: 769px) and (max-width: 992px) {
-.image {
-  width: 164px;
-  }
-}
-
-@media (min-width: 577px) and (max-width: 768px) {
-.image {
-  width: 124px;
-  }
-}
-
-@media (max-width: 576px) {
-.image {
-  width: 48px;
-}
-} */
-
-
-
 .basket {
   width: 150px;
 }
@@ -73,6 +40,17 @@
   }
 }
 
-.ff {
+.flex {
   display: flex;
 }
+
+.asteroid {
+  max-width: 402px;
+  min-width: 279px;
+}
+
+@media (max-width: 700px) {
+  .asteroid {
+    padding-bottom: 81px;
+  }
+} 

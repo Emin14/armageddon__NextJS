@@ -1,12 +1,13 @@
 'use client'
+
 import { useEffect } from 'react'
 import { useAppContext } from '../AppContext'
 import Asteroid from '../components/Asteroid'
 import Banner from '../components/Banner'
 import styles from './page.module.css'
 
-// Страница оформленного заказа
-export default function Orders() {
+
+export default function OrdersPage() {
 
   const {asteroids, setAsteroids} = useAppContext()
 
@@ -15,7 +16,7 @@ export default function Orders() {
     return () => {
       setAsteroids([])
     }
-  })
+  }, [])
 
   return (
     <div className={styles.wrapper}>

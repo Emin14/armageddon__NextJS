@@ -1,6 +1,6 @@
 .spinner {
-    border: 6px solid #f3f3f3; /* Light grey */
-    border-top: 6px solid #f6d608; /* Blue */
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid rgb(47, 94, 249);
     border-radius: 50%;
     width: 34px;
     height: 34px;

@@ -45,10 +45,13 @@
   .copyright {
     display: block;
     text-align: center;
-    margin: 16px;
     position: fixed;
     bottom: 0;
     right: 0;
     width: 100%;
+    padding: 0 16px 16px 16px;
+    background-color: black;
+    border-radius: 40px;
+    z-index: 2;
   }
 }

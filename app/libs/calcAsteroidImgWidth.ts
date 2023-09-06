@@ -1,4 +1,4 @@
-export default function calcWidth(diametr, screenSize) {
+export default function calcWidth(diametr: number, screenSize?: number) {
     let width = 10
     if(diametr < 100) {
       width = 20+(diametr*0.5)
@@ -15,7 +15,7 @@ export default function calcWidth(diametr, screenSize) {
         width = 200
       }
     }
-   if(screenSize < 500) {
+   if(screenSize && screenSize < 500) {
     return width * 0.85
    }
     return width

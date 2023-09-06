@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -20,9 +24,25 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.jsx", "app/libs/getAsteroids.js", "app/components/Asteroid/index.js", "app/asteroids/[id]/page.jsx", "app/components/Approaches/index.jsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/page.tsx",
+    "app/libs/getAsteroids.ts",
+    "app/components/Asteroid/index.js",
+    "app/asteroids/[id]/page.tsx",
+    "app/components/Title/index.tsx",
+    "app/AppContext.tsx",
+    "app/libs/getAsteroid.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
