@@ -24,6 +24,8 @@ export default function Asteroid({ data, basket }: props) {
 
   const { asteroids, setAsteroids, unit } = useAppContext()
 
+  console.log(data)
+
   const addToBasket = (e: React.MouseEvent<HTMLButtonElement>) => {
     const idAsteroid = (e.target as HTMLButtonElement).getAttribute("data-id");
     let newArray = data.find(item => item.id === idAsteroid);
@@ -61,7 +63,7 @@ export default function Asteroid({ data, basket }: props) {
       {data && data.map(el => {
         const date = el.close_approach_data[0].close_approach_date
         const nameAsteroid = el.name
-        const diametr = +(el.estimated_diameter.meters.estimated_diameter_min)
+        const diametr = +(el.estimated_diameter?.meters.estimated_diameter_min)
         const hazardous = el.is_potentially_hazardous_asteroid
         const distance = el.close_approach_data[0].miss_distance
         const id = el.id
